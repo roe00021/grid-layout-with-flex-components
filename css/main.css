@@ -10,7 +10,10 @@ body{
     flex-direction: column;
 }
 .icon{
+    display: flex;
     order: -1;
+    justify-content: center;
+
 }
 .emoji h2{
     margin: 0;
@@ -28,6 +31,11 @@ body{
 }
 .emojis{
     display: grid;
-    grid-template-columns: auto auto;
+    /* source for line 35: https://ishadeed.com/article/css-grid-minmax/#:~:text=The%20minimum%20value%20is%20200px,take%20the%20available%20remaining%20space. */
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    /* grid-template-columns: auto auto; */
     grid-gap: 1rem;
+}
+a {
+    margin-top: auto;
 }
